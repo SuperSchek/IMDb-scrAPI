@@ -1,0 +1,44 @@
+{
+  "name": "imdb-scrapi",
+  "description": "An API to get data off of IMDB using Puppeteer.",
+  "main": "src/index.js",
+  "author": "Sander Schekman",
+  "repository": "https://github.com/SuperSchek/IMDb-scrAPI.git",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/github": "^7.0.3",
+    "@semantic-release/npm": "^7.0.3",
+    "@semantic-release/release-notes-generator": "^9.0.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "semantic-release": "^17.0.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "puppeteer": "^2.1.0",
+    "yargs": "^15.1.0"
+  },
+  "bin": {
+    "imdb-scrapi": "./bin/index.js"
+  },
+  "version": "0.0.0-development",
+  "scripts": {
+    "dev": "nodemon ./bin/index.js serve",
+    "serve": "./bin/index.js serve",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "IMDb",
+    "movies",
+    "tv",
+    "shows",
+    "data",
+    "api",
+    "scraping",
+    "crawling"
+  ]
+}
