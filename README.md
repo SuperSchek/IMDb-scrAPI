@@ -1,5 +1,8 @@
 # IMDB scrAPI
 
+[![Build
+Status](https://travis-ci.org/SuperSchek/IMDb-scrAPI.svg?branch=master)](https://travis-ci.org/SuperSchek/IMDb-scrAPI)
+
 ##### A minimal API for getting data off of IMDb using [Puppeteer](https://github.com/puppeteer/puppeteer/).
 
 Can be served from the CLI or integrated into an existing `node` application.
