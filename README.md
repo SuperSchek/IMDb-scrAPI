@@ -1,4 +1,4 @@
-# IMDB scrAPI
+# IMDb scrAPI
 
 [![Build
 Status](https://travis-ci.org/SuperSchek/IMDb-scrAPI.svg?branch=master)](https://travis-ci.org/SuperSchek/IMDb-scrAPI)
