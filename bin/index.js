@@ -14,10 +14,7 @@ yargs
       });
     },
     yargs => {
-      const options = {
-        ...yargs
-      };
-      new Application().serve(options);
+      new Application().serve(yargs);
     }
   )
   .help().argv;
