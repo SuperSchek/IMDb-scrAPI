@@ -1,5 +1,6 @@
 const constants = {
   QUERY_URL: "https://www.imdb.com/find?q=%query%&s=tt",
+  QUERY_PLACEHOLDER: "%query%",
   QUERY_PARAMS: {
     MOVIES: "&ttype=ft",
     TV: "&ttype=tv",

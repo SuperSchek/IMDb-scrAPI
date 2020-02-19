@@ -2,16 +2,16 @@ const constants = require("../constants");
 
 class UrlUtility {
   /**
-   * Takes a query and returns the IMDB url for it
+   * Takes a query string and returns the IMDB url for it
    * @static
    *
    * @param {string} query
    * @param {string} type - "movies", "tv" or "episode"
    */
-  static buildImdbQuery(query, type) {
+  static buildImdbQuery(query, type = null) {
     const encodedQuery = encodeURIComponent(query);
     let url = constants.QUERY_URL;
-    url = url.replace("%query%", encodedQuery);
+    url = url.replace(constants.QUERY_PLACEHOLDER, encodedQuery);
 
     switch (type) {
       case "movies":
