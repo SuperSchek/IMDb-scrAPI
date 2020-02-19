@@ -29,9 +29,9 @@ class UrlUtility {
   }
 
   static buildEpisodeCode(seasonNumber, episodeNumber) {
-    if (!seasonNumber || !episodeNumber) {
+    if (seasonNumber == null || episodeNumber == null) {
       throw new ReferenceError(
-        "Both seasonNumber and episodeNumber need to be defined to be able to build an episodeCode"
+        "Both seasonNumber and episodeNumber have to be defined to be able to build an episodeCode"
       );
     } else {
       return `S${seasonNumber < 10 ? "0" + seasonNumber : seasonNumber}E${
