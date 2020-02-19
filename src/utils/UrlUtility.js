@@ -28,6 +28,13 @@ class UrlUtility {
     return url;
   }
 
+  /**
+   * Builds a string for this episode with the following format 'S00E00'
+   * @static
+   *
+   * @param {number} seasonNumber
+   * @param {number} episodeNumber
+   */
   static buildEpisodeCode(seasonNumber, episodeNumber) {
     if (seasonNumber == null || episodeNumber == null) {
       throw new ReferenceError(
