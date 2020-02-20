@@ -69,14 +69,5 @@ describe("UrlUtility", () => {
         }).toThrow(ReferenceError);
       }
     );
-    it("throws ReferenceError when seasonNumber is not defined", () => {
-      // Assign
-      const episode = faker.random.number({ min: 1, max: 9 });
-
-      // Act & Assert
-      expect(() => {
-        UrlUtility.buildEpisodeCode(null, episode);
-      }).toThrow(ReferenceError);
-    });
   });
 });
