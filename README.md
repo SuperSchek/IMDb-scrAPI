@@ -46,6 +46,7 @@ imdb-scrapi serve
 ```
 
 **Options**
+
 Options set as CLI arguments will take precedent over options specified in the `config.json`.
 | Option | Description | Type | Default |
 | ------------- |------------- | -----: | -----: |
