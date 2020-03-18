@@ -152,17 +152,9 @@ module.exports = class ImdbUtility {
     }
 
     await browser.close();
-    return _orderBy(episodeData, function(episode) {
+    return _orderBy(episodeData, function (episode) {
       return episode.airdate;
     });
-  }
-
-  static determineDate(date) {
-    if (date.length < 9) {
-      return null;
-    } else {
-      return new Date(date.replace(".", ""));
-    }
   }
 
   static async getAllEpisodes(imdbId) {
@@ -211,5 +203,18 @@ module.exports = class ImdbUtility {
     return allEpisodes.filter(episode => {
       return episode.airdate < now && episode.airdate !== null;
     });
+  }
+
+  /**
+   * Returns a Date based on the passed string
+   *  
+   * @param {string} date 
+   */
+  static dateFromString(date) {
+    if (date.length < 9) {
+      return null;
+    } else {
+      return new Date(date.replace(".", ""));
+    }
   }
 };
