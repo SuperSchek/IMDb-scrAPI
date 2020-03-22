@@ -147,12 +147,12 @@ module.exports = class ImdbUtility {
       episodeData.push({
         name,
         episodeCode: UrlUtility.buildEpisodeCode(season, i + 1),
-        airdate: ImdbUtility.determineDate(airdate)
+        airdate: ImdbUtility.dateFromString(airdate)
       });
     }
 
     await browser.close();
-    return _orderBy(episodeData, function (episode) {
+    return _orderBy(episodeData, function(episode) {
       return episode.airdate;
     });
   }
@@ -207,8 +207,8 @@ module.exports = class ImdbUtility {
 
   /**
    * Returns a Date based on the passed string
-   *  
-   * @param {string} date 
+   *
+   * @param {string} date
    */
   static dateFromString(date) {
     if (date.length < 9) {
